@@ -110,7 +110,12 @@ public class ItemServiceImpl implements ItemService {
     @Override
     @Transactional
     public boolean decreaseStock(Integer itemId, Integer amount) throws BussinessException {
-        int affectedRow = itemStockDOMapper.decreaseStock(itemId, amount);
+        int affectedRow = 0;
+        try {
+            affectedRow = itemStockDOMapper.decreaseStock(itemId, amount);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         if (affectedRow > 0) {
             //更新库存成功
             return true;
