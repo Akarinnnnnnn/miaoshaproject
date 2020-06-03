@@ -34,7 +34,7 @@ public class App
         if (userDO == null) {
             return "用户对象不存在";
         } else {
-            return userDO.getName();
+            return "这是主页";
         }
 //        UserPasswordDO userPasswordDO = userPasswordDOMapper.selectByUserId(1);
 //        return userPasswordDO.getEncrptPassword();

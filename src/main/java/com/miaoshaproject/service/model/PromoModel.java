@@ -14,11 +14,17 @@ public class PromoModel {
 
     private Integer id;
 
+    //秒杀活动状态 1表示还未开始 2表示进行中 3表示已结束
+    private Integer status;
+
     //活动名称
     private String promoName;
 
     //活动开始时间
     private DateTime startDate;
+
+    //活动结束时间
+    private DateTime endDate;
 
     //活动适用商品
     private Integer itemId;
@@ -32,6 +38,14 @@ public class PromoModel {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public String getPromoName() {
@@ -48,6 +62,14 @@ public class PromoModel {
 
     public void setStartDate(DateTime startDate) {
         this.startDate = startDate;
+    }
+
+    public DateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(DateTime endDate) {
+        this.endDate = endDate;
     }
 
     public Integer getItemId() {
